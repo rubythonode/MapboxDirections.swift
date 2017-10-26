@@ -390,7 +390,7 @@ open class RouteOptions: NSObject, NSSecureCoding, NSCopying{
      */
     open var distanceMeasurementSystem: MeasurementSystem = Locale.autoupdatingCurrent.usesMetric ? .metric : .imperial
     
-    open var inclueBannerInstructions = false
+    open var includeBannerInstructions = false
     
 
     /**
@@ -415,8 +415,8 @@ open class RouteOptions: NSObject, NSSecureCoding, NSCopying{
             params.append(URLQueryItem(name: "voice_units", value: String(describing: distanceMeasurementSystem)))
         }
         
-        if inclueBannerInstructions {
-            params.append(URLQueryItem(name: "banner_instructions", value: String(inclueBannerInstructions)))
+        if includeBannerInstructions {
+            params.append(URLQueryItem(name: "banner_instructions", value: String(includeBannerInstructions)))
         }
 
         // Include headings and heading accuracies if any waypoint has a nonnegative heading.
