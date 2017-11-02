@@ -749,6 +749,9 @@ open class RouteStep: NSObject, NSSecureCoding {
      */
     open let instructionsSpokenAlongStep: [SpokenInstruction]?
     
+    /**
+     Contains an array of `VisualInstruction` used for visually conveying information about a given `RouteStep`.
+     */
     open let visualInstructionsAlongStep: [VisualInstruction]?
     
     open override var description: String {
